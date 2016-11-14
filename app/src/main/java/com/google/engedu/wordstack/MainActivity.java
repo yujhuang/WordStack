@@ -132,9 +132,13 @@ public class MainActivity extends AppCompatActivity {
                         String m1 = "",m2="";
                         if(words.contains(w1)) {
                             m1 = w1+" is valid, ";
+                        }else {
+                            m1 = w1+" is not valid, ";
                         }
                         if(words.contains(w2)) {
                             m2 = w2 + " is valid";
+                        }else {
+                            m2 = w2 + " is not valid";
                         }
                         messageBox.setText(m1+m2);
                     }

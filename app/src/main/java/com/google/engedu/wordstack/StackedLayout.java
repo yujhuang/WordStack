@@ -41,7 +41,11 @@ public class StackedLayout extends LinearLayout {
     }
 
     public void clear() {
-        tiles = null;
+        while(!tiles.empty()) {
+            View popped = tiles.pop();
+            removeView(popped);
+        }
+        tiles= null;
         tiles = new Stack();
     }
 }
